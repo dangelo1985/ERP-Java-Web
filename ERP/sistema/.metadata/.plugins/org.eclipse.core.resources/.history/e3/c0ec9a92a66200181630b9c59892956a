@@ -1,0 +1,5 @@
+package br.com.erp.domain;
+
+public class ClassificacaoFiscal {
+
+}

@@ -1,0 +1,25 @@
+package br.com.erp.bean;
+
+import javax.faces.bean.ManagedBean;
+
+import org.omnifaces.util.Messages;
+
+import br.com.erp.domain.Estado;
+
+@ManagedBean
+public class EstadoBean {
+	private Estado estado;
+	
+	public void salvar() {
+		Messages.addGlobalInfo("Salvo com sucesso");
+	}
+
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+	
+}

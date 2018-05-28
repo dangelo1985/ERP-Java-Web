@@ -1,0 +1,14 @@
+package br.com.aprendizagem.main;
+
+import org.hibernate.Session;
+
+import br.com.aprendizagem.util.HibernateUtil;
+
+public class HibernateUtilTest {
+	public static void main(String[] args) {
+		Session session = HibernateUtil.getFabricaDeSessoes().openSession();
+		session.close();
+		HibernateUtil.getFabricaDeSessoes().close();
+	}
+
+}

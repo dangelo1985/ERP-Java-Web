@@ -1,0 +1,27 @@
+package br.com.erp.domain;
+
+import javax.persistence.Entity;
+
+@SuppressWarnings("serial")
+@Entity
+public class Estado extends GenericDomain {
+	private String Sigla;
+	private String Nome;
+
+	public String getSigla() {
+		return Sigla;
+	}
+
+	public void setSigla(String sigla) {
+		Sigla = sigla;
+	}
+
+	public String getNome() {
+		return Nome;
+	}
+
+	public void setNome(String nome) {
+		Nome = nome;
+	}
+
+}

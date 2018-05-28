@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+C:\ERP\sistema\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3927496509.index
+296736535.index
+891833871.index
+38718522.index
+1800308830.index
+4117870683.index
+4156303028.index
+725555719.index
+947084902.index
+41318399.index
+1800308830.index

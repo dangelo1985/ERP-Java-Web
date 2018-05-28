@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</f:facet>
+
+	<title>Insert title here</title>
+	<h:outputStylesheet library="tema" name="css/estilo.css" />
+	<h:outputStylesheet library="tema" name="css/bootstrap.min.css" />
+	<h:outputStylesheet library="tema" name="css/bootstrap.css" />
+
+</h:head>
+<h:body>
+	<p:growl id="mensagem" />
+	
+	<nav class="navbar navbar-inverse navbar-static-top barra">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#menu">
+					<span style="color: #FFF;">Menu</span>
+				</button>
+				<button type="button" class="navbar-toggle"
+					data-toggle="collapse" data-target="#menu">
+					<span style="color: #FFF;">Esconder</span>
+			   </button>
+
+			</div>
+			
+			<!-- fim do header -->
+			<a href="" class="navbar-brand logotipo"> <h:graphicImage
+					library="tema" name="images/logotipo.png" alt="DNSistemas" />
+			</a>
+
+		</div>
+	</nav>
+
+	<div class="row-fluid">
+		<div class="container-fluid linha">
+
+			<div class="col-md-3 col-xs-12">
+				<div class="container collapse navbar-collapse" id="menu">
+					<span class="Categorias">
+						<h1>Home</h1>
+						<div class="panel-group">
+							<div class="panel" style="background-color: #008B8B;">
+								<div class="panel-heading"
+									style="background-color: #008B8B; color: #FFF;">
+									<h4 class="panel-title">
+										<span>Cadastros</span>
+									</h4>
+								</div>
+								<div class="panel">
+									<div class="panel-body">
+										<p>
+											<a href="../pages/estados.xhtml" class="list-group-item">Estados</a> 
+											<a href="#"	class="list-group-item">Produtos</a> 
+											<a href="#"	class="list-group-item">Fornecedores</a> 
+											<a href="#"	class="list-group-item">Chaveiros</a>
+										</p>
+									</div>
+									<!-- panel-body-->
+								</div>
+								<!-- MenuBrinquedos-->
+							</div>
+
+							<div class="panel" style="background-color: #008B8B;">
+								<div class="panel-heading"
+									style="background-color: #008B8B; color: #FFF;">
+									<h4 class="panel-title">
+										<span>Faturamento</span>
+									</h4>
+								</div>
+								<div class="panel">
+									<div class="panel-body">
+										<p>
+											<a href="#" class="list-group-item">Vendas</a> <a href="#"
+												class="list-group-item">Ordem de Serviço</a>
+										</p>
+									</div>
+									<!-- panel-body-->
+								</div>
+								<!-- MenuBrinquedos-->
+							</div>
+
+						</div>
+					</span>
+				</div>
+			</div>
+			<!-- Fim do menu lateral -->
+
+
+
+
+
+			<div class="col-md-9 col-xs-12 conteudo">
+				<ui:insert name="conteudo" />
+			</div>
+			<!-- Fim do menu conteudo -->
+
+
+
+		</div>
+		<!-- Fim do container fluid -->
+	</div>
+	<!--fim da linha -->
+
+	<nav class="navbar navbar-inverse navbar-static-bottom foot">
+		<footer class="container-fluid">
+			<p class="m-0 text-center text-white">Copyright© Todos Direitos
+				reservados - Desenvolvido por Rafael D'Angelo</p>
+		</footer>
+	</nav>
+	
+	<h:outputScript library="tema" name="jquery/jquery.js"/>
+	<h:outputScript library="tema" name="jquery/jquery.min.js"/>
+	<h:outputScript library="tema" name="js/bootstrap.js"/>
+	<h:outputScript library="tema" name="js/bootstrap.min.js"/>
+</h:body>
+</html>

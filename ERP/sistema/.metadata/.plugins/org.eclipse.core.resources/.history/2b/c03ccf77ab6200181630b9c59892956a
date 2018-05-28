@@ -1,0 +1,93 @@
+package br.com.erp.bean;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.event.ActionEvent;
+
+import org.omnifaces.util.Messages;
+
+import br.com.erp.dao.NcmDAO;
+import br.com.erp.domain.Ncm;
+
+@SuppressWarnings("serial")
+@ManagedBean
+@ViewScoped
+public class GrupoBean implements Serializable {
+	
+		private Ncm ncm;
+		private List<Ncm> ncms;
+
+		@PostConstruct
+		public void listar() {
+			try {
+				NcmDAO ncmDAO = new NcmDAO();
+				ncms = ncmDAO.listar();
+				
+			} catch (RuntimeException erro) {
+				Messages.addGlobalError("Ocorreu um erro ao tentar listar");
+				erro.printStackTrace();
+			}
+			
+		}
+		
+		public void novo() {
+			ncm = new Ncm();
+		}
+
+		public void salvar() {
+			try {
+				NcmDAO ncmDAO = new NcmDAO();
+				ncmDAO.merge(ncm);
+				ncm = new Ncm();
+				
+				ncms = ncmDAO.listar();
+				
+				Messages.addGlobalInfo("Salvo com Sucesso!");
+			} catch (RuntimeException erro) {
+				Messages.addGlobalError("Ocorreu um erro ao tentar Salvar");
+				erro.printStackTrace();
+			}
+		}
+		public void excluir(ActionEvent evento) {
+			try {
+			ncm = (Ncm)  evento.getComponent().getAttributes().get("linhaSelecionada");
+			NcmDAO ncmDAO = new NcmDAO();
+			ncmDAO.excluir(ncm);
+			ncms = ncmDAO.listar();
+			
+			Messages.addGlobalInfo("Excluido com Sucesso");
+			}catch(RuntimeException erro) {
+				Messages.addGlobalError("Ocorreu um erro ao tentar Excluir");
+				erro.printStackTrace();
+				
+			}
+		}
+		public void editar(ActionEvent evento) {
+			ncm = (Ncm) evento.getComponent().getAttributes().get("linhaSelecionada");
+		}
+
+		public Ncm getNcm() {
+			return ncm;
+		}
+
+		public void setNcm(Ncm ncm) {
+			this.ncm = ncm;
+		}
+
+		public List<Ncm> getNcms() {
+			return ncms;
+		}
+
+		public void setNcms(List<Ncm> ncms) {
+			this.ncms = ncms;
+		}
+
+		
+
+	
+
+}

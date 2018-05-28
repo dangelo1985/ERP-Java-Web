@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</f:facet>
+
+	<title>Sistema ERP</title>
+	<h:outputStylesheet library="tema" name="css/estilo.css" />
+	<h:outputStylesheet library="tema" name="css/bootstrap.min.css" />
+	<h:outputStylesheet library="tema" name="css/bootstrap.css" />
+
+
+</h:head>
+<h:body>
+	<p:growl id="mensagem"/>
+
+	<nav class="navbar navbar-inverse navbar-static-top barra">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#menucat">
+					<span style="color: #FFF;">Menu</span>
+				</button>
+			</div>
+
+			<!-- fim do header -->
+			<a href="" class="navbar-brand logotipo"> <h:graphicImage
+					library="tema" name="images/logotipo.png" alt="DNSistemas" />
+			</a>
+
+		</div>
+	</nav>
+
+	<div class="row-fluid">
+		<div class="container-fluid linha">
+			<div class="col-md-3 col-xs-12">
+				<div class="container collapse navbar-collapse" id="menucat">
+					<span class="categorias">
+
+						<div class="panel-group" id="accordion">
+							<!--menuBrinquedos-->
+							<div class="panel titulo-painel "
+								style="background-color: #008B8B; color: #FFF;">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a href="#menuBrinquedos" class="panel-group-item"
+											data-toggle="collapse" data-parent="#accordion">Cadastros<span
+											class="caret"></span></a>
+									</h4>
+
+								</div>
+								<!-- panel-heading-->
+								<div class="panel-collapse collapse" id="menuCadastros">
+									<div class="panel-body">
+										<p>
+											<a href="../pages/estados.xhtml" class="list-group-item">Estados</a>
+											<a href="#" class="list-group-item">Cidades</a> 
+											<a href="#" class="list-group-item">Pessoas</a>
+											<a href="#"	class="list-group-item">Produtos</a>
+										</p>
+									</div>
+									<!-- panel-body-->
+								</div>
+								<!-- MenuBrinquedos-->
+							</div>
+							<!-- panel titulo-painel-->
+
+							<!--menuColecionaveis-->
+							<div class="panel titulo-painel"
+								style="background-color: #008B8B; color: #FFF;">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a href="#menuColecionaveis" class="panel-group-item"
+											data-toggle="collapse" data-parent="#accordion">Estoque<span
+											class="caret"></span></a>
+									</h4>
+
+								</div>
+								<!-- panel-heading-->
+								<div class="panel-collapse collapse" id="menuColecionaveis">
+									<div class="panel-body">
+										<p>
+											<a href="#" class="list-group-item">Brinquedos</a> <a
+												href="#" class="list-group-item">Colecionaveis</a> <a
+												href="#" class="list-group-item">Pop Funko</a> <a href="#"
+												class="list-group-item">Chaveiros</a>
+										</p>
+									</div>
+									<!-- panel-body-->
+								</div>
+								<!-- MenuBrinquedos-->
+							</div>
+							<!-- panel titulo-painel-->
+
+							<!--menuColecionaveis-->
+							<div class="panel titulo-painel"
+								style="background-color: #008B8B; color: #FFF;">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a href="#menuColecionaveis" class="panel-group-item"
+											data-toggle="collapse" data-parent="#accordion">Colecionáveis<span
+											class="caret"></span></a>
+									</h4>
+
+								</div>
+								<!-- panel-heading-->
+								<div class="panel-collapse collapse" id="menuColecionaveis">
+									<div class="panel-body">
+										<p>
+											<a href="#" class="list-group-item">Brinquedos</a> <a
+												href="#" class="list-group-item">Colecionaveis</a> <a
+												href="#" class="list-group-item">Pop Funko</a> <a href="#"
+												class="list-group-item">Chaveiros</a>
+										</p>
+									</div>
+									<!-- panel-body-->
+								</div>
+								<!-- MenuBrinquedos-->
+							</div>
+							<!-- panel titulo-painel-->
+
+
+						</div>
+						<!-- accordion-->
+					</span>
+
+				</div>
+				<!-- menucat-->
+			</div>
+			<!-- navbar-->
+
+
+
+
+
+
+			<div class="col-md-9 col-xs-12 conteudo">
+				<ui:insert name="conteudo" />
+			</div>
+			<!-- Fim do menu conteudo -->
+
+
+
+		</div>
+		<!-- Fim do container fluid -->
+	</div>
+	<!--fim da linha -->
+
+	<nav class="navbar navbar-inverse navbar-fixed-bottom foot">
+		<footer class="container-fluid">
+			<p class="m-0 text-center text-white">Copyright© Todos Direitos
+				reservados - Desenvolvido por Rafael D'Angelo</p>
+		</footer>
+	</nav>
+
+	
+	<script type="text/javascript" src="../resources/tema/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../resources/tema/js/bootstrap.min.js"></script>
+</h:body>
+</html>

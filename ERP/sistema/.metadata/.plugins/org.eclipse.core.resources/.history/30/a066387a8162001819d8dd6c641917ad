@@ -1,0 +1,52 @@
+body{
+    min-height: 100vh;
+	background-color: #ccc;
+	
+}
+
+.logotipo img{
+	height: 40px;
+	margin-left: 10px;
+	margin-top:-5px;
+}
+
+@media (max-width: 767px){
+	.barra{
+		height: 80px;
+	}
+	.barra button{
+		margin-top: 20px;
+	}
+	.logotipo img{
+		margin-top:-70px;
+		height: 60px;
+	}
+	.linha{
+		margin-top: -20px;
+	}
+	
+}
+
+.conteudo{
+	background-color:#008B8B;
+	border:1px double #008B8B;   
+    padding:10px;
+    border-radius:4px;
+    
+}
+footer h4{
+	color: #FFF;
+	text-align: center;
+}
+.foot{
+	margin-top: 5px;
+}
+.foot p{
+	margin-top: 15px;
+	color: #FFF;
+}
+
+.coluna3{
+	width: 150px;
+}
+

@@ -1,0 +1,7 @@
+package br.com.erp.dao;
+
+import br.com.erp.domain.Marca;
+
+public class NcmDAO extends GenericDAO<Marca> {
+
+}
